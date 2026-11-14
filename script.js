@@ -1,4 +1,4 @@
-//slide show
+//animated cards
 const exploreCards =
 document.querySelectorAll(".explore-card");
 
@@ -11,7 +11,7 @@ const cardObserver = new IntersectionObserver(
 
                 setTimeout(() => {
                     entry.target.classList.add("show");
-                }, index * 300);
+                }, index * 400);
 
                 cardObserver.unobserve(entry.target);
             }
@@ -20,7 +20,7 @@ const cardObserver = new IntersectionObserver(
 
     },
     {
-        threshold: 0.2
+        threshold: 0.4
     }
 );
 
@@ -28,7 +28,7 @@ exploreCards.forEach(card => {
     cardObserver.observe(card);
 });
 
-//food
+//food button
 const buttons = document.querySelectorAll(".detailsBtn");
 
 buttons.forEach(function(button) {

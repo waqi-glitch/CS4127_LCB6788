@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Times New Roman', sans-serif;
+    font-family: 'Times New Roman', serif;
     background-color: #E9E5D5;
     color: #242020;
 }
@@ -10,33 +10,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 15px 40px;
-}
-
-.hero{
     position: relative;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-}
-
-.intro {
-    position: relative;
-    color: #014614;
-    z-index: 2;
-    font-size: 70px;
-    text-align: center;
-}
-
-video {
-     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90%;
-    object-fit: cover;
 }
 
 .logo{
@@ -58,7 +32,7 @@ video {
 
 .logo-text h1{
     font-size: 30px;
-    color: #606303;
+    color: #d6c24a;
 }
 
 .logo-text p{
@@ -68,15 +42,11 @@ video {
 
 #menuBtn {
     background-color: #18180c;
-    color: aliceblue;
+    color: #d6c24a;
     font-size: 30px;
     cursor: pointer;
-    padding: 7px 10px;
+    padding: 8px 5px;
     border: none;
-}
-
-header {
-    position: relative;
 }
 
 #navMenu {
@@ -85,8 +55,8 @@ header {
     right: 0;
     width: 150px;
     top: 100%;
-    padding: 180;
-    background-color: #362c20a4;
+    padding: 10px;
+    background-color: #362c20;
     z-index: 100;
 }
 
@@ -113,6 +83,148 @@ header {
 #navMenu a {
     color: aliceblue;
     display: block;
+}
+
+/*Footer*/
+footer {
+    background-color: #362c20;
+    color:#d6c24a;
+}
+
+.footer-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer-about{
+    max-width: 400px;
+}
+
+.footer-link{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-link a{
+    color:#d6c24a;
+}
+
+/* Home Page */
+.hero{
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.intro {
+    position: relative;
+    color: white;
+    z-index: 2;
+    font-size: 70px;
+    text-align: center;
+    text-shadow: 0 2px 8px #000;
+}
+
+video {
+     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-brunei{
+    display: grid;
+    align-items: center;
+    gap: 30px;
+    background-color: #a68a6499;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px #3f341594;
+}
+
+.about-text h2{
+    font-size: 35px;
+    color:#242020;
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 25px;
+    color: #362c20;
+    text-align: center;
+}
+
+.about-map iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.event-section {
+    padding: 60px 8%;
+    text-align: center;
+    background-color: #E9E5D5;
+}
+
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+    background-color: #e2d6c78c;
+}
+
+.event-card {
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.event-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.event-card .image-details{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #f4f010;
+    font-size: 20px;
+    text-align: center;
+    background: linear-gradient(
+        transparent,
+        #191712e6
+    );
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.event-card:hover .image-details {
+    opacity: 1;
+}
+
+.event-card:hover img {
+    transform: scale(1.1);
 }
 
 .explore-section {
@@ -159,7 +271,7 @@ header {
 .explore-card:nth-child(1) {
     background-image:
     linear-gradient(transparent, #000000cc),
-    url("image/Jame Asr.jpg");
+    url("image/JameAsr.jpg");
 }
 
 .explore-card:nth-child(2) {
@@ -173,6 +285,7 @@ header {
     linear-gradient(transparent, #000000cc),
     url("image/ambuyat.jpg");
 }
+
 
 .card-content {
     color: white;
@@ -190,35 +303,7 @@ header {
     border-radius: 20px;
 }
 
-.history{
-    background-color: #a68a6499;
-    padding: 40px;
-    margin: 40px auto;
-    max-width: 1100px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px #3f341594;
-}
-
-.history h3{
-    color: #958301;
-    font-size: 30px;
-}
-
-.history p{
-    color:aliceblue;
-    line-height: 1.3;
-    font-size: 24px;
-}
-
-.history a{
-    display: inline-block;
-    background-color: #362c20;
-    color: #958301;
-    padding: 10px 16px;
-    border-radius: 5px;
-}
-
+/* Attraction Page */
 .attraction-container {
     display: flex;
     gap: 20px;
@@ -228,7 +313,7 @@ header {
 
 .attraction-card {
     flex: 1;
-    padding: 50px;
+    padding: 20px;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -240,7 +325,7 @@ header {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.5 ease;
+    transition: transform 0.5s ease;
 }
 
 .image-details {
@@ -251,17 +336,14 @@ header {
     height: 100%;
     box-sizing: border-box;
     padding: 25px;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
     color: white;
-    text-align: left;
-
+    text-align: center;
     background: linear-gradient(
         transparent,
-        #000000e6
+        #413b28e6
     );
     opacity: 0;
     transition: 0.5s ease;
@@ -275,42 +357,20 @@ header {
     transform: scale(1.1);
 }
 
-footer {
-    background-color: #362c20;
-    color:#958301
-}
-
-.footer-container{
-    display:flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.footer-about{
-    max-width: 400px;
-}
-
-.footer-link{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-link a{
-    color:#958301;
-}
-
+/* food and attraction container */
 .flex-container {
     display: flex;
     gap: 16px;
 }
 
+/* food and culture card */
 .flex-card {
     flex: 1;
     padding: 50px;
     text-align: center;
     border-radius: 10px;
     background: #a68a6499;
-    color: white;
+    color: #242020;
     font-weight: bold;
     box-shadow: 0 4px 10px #3f341594;
 }
@@ -322,6 +382,7 @@ footer {
     display: block;
 }
 
+/* food page */
 .food h2{
     font-size: 30px;
 }
@@ -333,9 +394,36 @@ footer {
 .flex-food{
     background-color: #f1c49751;
     padding: 10px;
-
 }
 
+.details {
+    display: none;
+    font-size: 25px;
+}
+
+.details.show{
+    display: block;
+}
+
+.food-details h2 {  
+    font-size: 30px;
+    color: #3a2800;
+}
+
+.food-details p {   
+    color: #18180c;
+}
+
+.detailsBtn {
+    background-color: #393024;
+    color: aliceblue;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Culture Page */
 .culture-text h1 {
     font-weight: bold;
 }
@@ -367,13 +455,14 @@ footer {
 
 .culture-section img{
     width: 100%;
-    max-width: 1700px;
-    height: 300;
+    max-width: 1370px;
+    height: 420px;
     border-radius: 10px;
 }
 
 .culture-images {
     display:flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap:30px;
     align-items: stretch;
@@ -381,7 +470,8 @@ footer {
 
 .culture-items {
     text-align: center;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
 }
 
 .culture-items img {
@@ -397,12 +487,42 @@ footer {
 }
 
 .culture-things img {
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
 }
 
 .culture-images h3 {
-    color: #606303;
+    color: #4f3a00;
     margin-top: 10px;
+}
+
+.history{
+    background-color: #a68a6499;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 1100px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px #3f341594;
+}
+
+.history h3{
+    color: #362c20;
+    font-size: 30px;
+}
+
+.history p{
+    color:#242020;
+    line-height: 1.3;
+    font-size: 24px;
+}
+
+.history a{
+    display: inline-block;
+    background-color: #362c20;
+    color: #d6c24a;
+    padding: 10px 16px;
+    border-radius: 5px;
 }
 
 .text{
@@ -410,33 +530,7 @@ footer {
     text-align: left;
 }
 
-.details {
-    display: none;
-    font-size: 25px;
-}
-
-.details.show{
-    display: block;
-}
-
-.food-details h2 {  
-    font-size: 30px;
-    color: #604200;
-}
-
-.food-details p {   
-    color: #18180c;
-}
-
-.detailsBtn {
-    background-color: #393024;
-    color: aliceblue;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
+/* Contact Page */
 .contact-info {
     background-color: #7a614176;
     padding: 30px;
@@ -460,7 +554,6 @@ footer {
 .contact-form {
     flex: 1.7;
     text-align: left;
-    box-shadow: #18180c;
 }
 
 .contact-form label {
@@ -485,7 +578,8 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
-    background-color: #868670ae;
+    background-color: #d6c24a;
+    color: #242020;
 }
 
 .contact-image {
@@ -497,4 +591,258 @@ footer {
     height: fit-content;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.travel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 5px;
+    text-align: center;
+}
+
+.travel-card {
+    max-width: 400px;
+    background-color: #8d6d429c;
+    color: #18180c;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.travel-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.travel-card h3 {
+    font-size: 20px;
+}
+
+.travel-card p {
+    line-height: 1.5;
+}
+
+.visa-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 60px;
+    margin: 20px;
+    background-color: #8d6d429c;
+    color: #242020;
+    border-radius: 15px;
+}
+
+/*For Phone*/
+@media screen and (max-width: 700px) {
+    header {
+        padding: 10px 15px;
+        align-items: center;
+    }
+
+    .logo-text h1 {
+        font-size: 20px;
+    }
+
+    .logo-text p {
+        font-size: 12px;
+    }
+
+    /* Hero section */
+    .hero {
+        height: 300px;
+    }
+
+    .intro {
+        font-size: 35px;
+        padding: 10px;
+    }
+
+    /* About Brunei */
+    .about-brunei {
+        padding: 25px 15px;
+    }
+
+    .about-text h2 {
+        font-size: 27px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+    }
+
+    .about-map iframe {
+        height: 250px;
+    }
+
+    /* Events */
+    .event-section {
+        padding: 40px 5%;
+    }
+
+    .event-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Explore section */
+    .explore-section h2 {
+        font-size: 30px;
+    }
+
+    .explore-section p {
+        font-size: 18px;
+    }
+
+    .explore-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .explore-card {
+        width: 100%;
+        flex: none;
+        height: 300px;
+    }
+
+    .history {
+        margin: 20px 10px;
+        padding: 25px 15px;
+    }
+
+    .history h3 {
+        font-size: 24px;
+    }
+
+    .history p {
+        font-size: 18px;
+    }
+
+    /* Attraction cards */
+    .attraction-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .attraction-card {
+        padding: 15px;
+        min-height: 250px;
+    }
+
+    .attraction-card img {
+        height: 250px;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+        padding: 20px;
+    }
+
+    /* Food cards */
+    .flex-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .flex-card {
+        padding: 20px;
+    }
+
+    .flex-card img {
+        height: 250px;
+    }
+
+    /* Culture section */
+    .culture-section {
+        padding: 20px 10px;
+    }
+
+    .culture-section h2 {
+        font-size: 30px;
+    }
+
+    .culture-section h3 {
+        font-size: 25px;
+    }
+
+    .culture-section p {
+        font-size: 18px;
+    }
+
+    .culture-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .culture-items {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .culture-items img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .culture-things img {
+        width: 100%; 
+    }
+
+    /* Contact section */
+    .contact-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .contact-form,
+    .contact-image {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+    }
+
+    .contact-image img {
+        height: 250px;
+    }
+
+    /* Travel cards */
+    .travel-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .travel-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .travel-card img {
+        height: 320px;
+    }
+
+    /* Visa section */
+    .visa-info {
+        flex-direction: column;
+        padding: 25px 15px;
+        margin: 15px;
+        text-align: center;
+    }
+}
+@media (hover: none) {
+    .event-card .image-details,
+    .attraction-card .image-details {
+        opacity: 1;
+    }
+}
+
+.event-card:focus-within .image-details,
+.attraction-card:focus-within .image-details {
+    opacity: 1;
 }
