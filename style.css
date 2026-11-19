@@ -1,22 +1,22 @@
 body {
     margin: 0;
-    font-family: 'Times New Roman', serif;
-    background-color: #E9E5D5;
-    color: #242020;
+    font-family: 'Times New Roman', serif; /*set font style to Times New Roman*/
+    background-color: #E9E5D5; /*make the background to #E9E5D5*/
+    color: #242020; /*for text colour*/
 }
 
 header {
-    background-color: #304B38;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 40px;
-    position: relative;
+    background-color: #304B38; /*make header backgroun dark green*/
+    display: flex; /*place header content in flexible layout*/
+    justify-content: space-between; /*push content to opposite sides*/
+    padding: 15px 40px; /*to add space inside header*/
+    position: relative; /*provide position reference for elements positioned inside*/
 }
 
 .logo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; /*make logo and text beside each other*/
+    align-items: center; /*vertically align*/
+    gap: 10px; /*spacing between logo and text*/
 }
 
 .logo img{
@@ -40,24 +40,25 @@ header {
     margin: 0;
 }
 
+/*Menu*/
 #menuBtn {
-    background-color: #18180c;
-    color: #d6c24a;
-    font-size: 30px;
-    cursor: pointer;
-    padding: 8px 5px;
-    border: none;
+    background-color: #18180c; /*change button background colour*/
+    color: #d6c24a; /*make symbol into a colour*/
+    font-size: 30px; /*control symbol size*/
+    cursor: pointer; /*change the cursor when hovering*/
+    padding: 8px 5px; /*create space inside button*/
+    border: none; /*remove default button border*/
 }
 
 #navMenu {
-    display: none;
-    position: absolute;
-    right: 0;
-    width: 150px;
-    top: 100%;
-    padding: 10px;
-    background-color: #362c20;
-    z-index: 100;
+    display: none; /*hides the navigation menu*/
+    position: absolute; /*make the menu to be positioned independently*/
+    right: 0; /*aligns to the right*/
+    width: 150px; /*set its width*/
+    top: 100%; /*position it below the header*/
+    padding: 10px; /*add spacing*/
+    background-color: #362c20; /*give menu a brown colour*/
+    z-index: 100; /*make it appear above overlapping content*/
 }
 
 #navMenu.show{
@@ -76,7 +77,7 @@ header {
     text-align: center;
 }
 
-#navMenu li:hover {
+#navMenu li:hover { /*for hover*/
     background-color: #8f7450c8;
 }
 
@@ -87,14 +88,14 @@ header {
 
 /*Footer*/
 footer {
-    background-color: #362c20;
+    background-color: #362c20; /*for the colour of the background in footer section*/
     color:#d6c24a;
 }
 
 .footer-container{
-    display:flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    display:flex; /*arrange content horizontally*/
+    justify-content: space-between; /*create space between footer section*/
+    align-items: flex-start; /*aligns towards the top*/
 }
 .footer-about{
     max-width: 400px;
@@ -112,13 +113,13 @@ footer {
 
 /* Home Page */
 .hero{
-    position: relative;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
+    position: relative; /*provide positioning reference for video and heading*/
+    height: 400px; /*set height*/
+    display: flex; /*enable flexible positioning*/
+    justify-content: center; /*centres content horizontally*/
+    align-items: center; /*centres content vetically*/
+    text-align: center; /*centres the text*/
+    overflow: hidden; /*hides anything extending the hero section*/
 }
 
 .intro {
@@ -131,12 +132,12 @@ footer {
 }
 
 video {
-     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    position: absolute; /*position the video inside parent section*/
+    top: 0; /*position it at top corner*/
+    left: 0; /*position it at left corner*/
+    width: 100%; /*make it fill hero section*/
+    height: 100%; /*make it fill hero section*/
+    object-fit: cover; /*make video cover entire section without stretching*/
 }
 
 .about-brunei{
@@ -174,11 +175,11 @@ video {
 }
 
 .event-container {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-    align-items: stretch;
-    background-color: #e2d6c78c;
+    display: grid; /*create a grid section*/
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /*make three equal-width columns, repeat three times and allow sharing the available space */
+    gap: 20px; /*create space between event cards*/
+    align-items: stretch; /*make grid stretch to fill available height*/
+    background-color: #e2d6c78c; /**/
 }
 
 .event-card {
@@ -197,7 +198,7 @@ video {
     transition: transform 0.5s ease;
 }
 
-.event-card .image-details{
+.event-card .image-details{ 
     position: absolute;
     bottom: 0;
     left: 0;
@@ -219,11 +220,11 @@ video {
     transition: 0.5s ease;
 }
 
-.event-card:hover .image-details {
+.event-card:hover .image-details { /*display information when hover*/
     opacity: 1;
 }
 
-.event-card:hover img {
+.event-card:hover img { /*enlarge image when hover*/
     transform: scale(1.1);
 }
 
@@ -243,9 +244,9 @@ video {
 }
 
 .explore-container {
-    display: flex;
-    gap: 25px;
-    margin-top: 40px;
+    display: flex; /*make cards to be placed beside each other*/
+    gap: 25px; /*add space between cards*/
+    margin-top: 40px; /*creates space above the card*/
 }
 
 .explore-card {
@@ -263,7 +264,7 @@ video {
     transition: 0.8s ease;
 }
 
-.explore-card.show {
+.explore-card.show { /*make cards visible and move back to original positions*/
     opacity: 1;
     transform: translateX(0);
 }
@@ -304,7 +305,7 @@ video {
 }
 
 /* Attraction Page */
-.attraction-container {
+.attraction-container { /*make attraction card place beside each other and spacing */
     display: flex;
     gap: 20px;
     margin-top: 20px;
@@ -349,30 +350,30 @@ video {
     transition: 0.5s ease;
 }
 
-.attraction-card:hover .image-details {
+.attraction-card:hover .image-details { /*show information when hover*/
     opacity: 1;
 }
 
-.attraction-card:hover img {
+.attraction-card:hover img { /*enlarge image when hover*/
     transform: scale(1.1);
 }
 
 /* food and attraction container */
-.flex-container {
+.flex-container { /*arrange food and culture cards horizontally with spacing between them*/
     display: flex;
     gap: 16px;
 }
 
 /* food and culture card */
 .flex-card {
-    flex: 1;
-    padding: 50px;
-    text-align: center;
-    border-radius: 10px;
-    background: #a68a6499;
-    color: #242020;
-    font-weight: bold;
-    box-shadow: 0 4px 10px #3f341594;
+    flex: 1; /*allow cards to share available space equally*/
+    padding: 50px; /*add space  inside each cards*/
+    text-align: center; /*centres the text*/
+    border-radius: 10px; /*round the corners*/
+    background: #a68a6499; /*change colour for background*/
+    color: #242020; /*change text colour*/
+    font-weight: bold; /*make text bold*/
+    box-shadow: 0 4px 10px #3f341594; /*add shadow around the card*/
 }
 
 .flex-card img {
@@ -396,12 +397,12 @@ video {
     padding: 10px;
 }
 
-.details {
+.details { /*hides the extra information*/
     display: none;
     font-size: 25px;
 }
 
-.details.show{
+.details.show{ /*display the information  when JavaScript adds the "show" class*/
     display: block;
 }
 
@@ -414,7 +415,7 @@ video {
     color: #18180c;
 }
 
-.detailsBtn {
+.detailsBtn { /*styles the Read More button*/
     background-color: #393024;
     color: aliceblue;
     padding: 10px 20px;
@@ -455,17 +456,16 @@ video {
 
 .culture-section img{
     width: 100%;
-    max-width: 1370px;
     height: 420px;
     border-radius: 10px;
 }
 
 .culture-images {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap:30px;
-    align-items: stretch;
+    display:flex; /*arrange the images in flexible layout*/
+    flex-wrap: wrap; /*make image to move onto another row when there is no space*/
+    justify-content: center; /*centres the image*/
+    gap:30px; /*create spacing between image*/
+    align-items: stretch; /*stretch items to fill available cross-axis space*/
 }
 
 .culture-items {
@@ -542,7 +542,7 @@ video {
     font-size: 20px;
 }
 
-.contact-container{
+.contact-container{  /*place contact form and images beside each other adn vertically align*/
     display: flex;
     align-items: center;
     gap: 20px;
@@ -551,7 +551,7 @@ video {
     border-radius: 10px;
     box-shadow: 0 4px 10px #3f341594;
 }
-.contact-form {
+.contact-form { /*allow contact form to get larger when there is space*/
     flex: 1.7;
     text-align: left;
 }
@@ -562,7 +562,7 @@ video {
     font-weight: bold;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input, .contact-form textarea { /*apply consisten styling to form input and textarea*/
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -636,7 +636,7 @@ video {
 }
 
 /*For Phone*/
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 700px) { /*applies different style when screen is 700 pixels*/
     header {
         padding: 10px 15px;
         align-items: center;
@@ -804,7 +804,7 @@ video {
     }
 
     .contact-form input,
-    .contact-form textarea {
+    .contact-form textarea { 
         width: 100%;
     }
 
@@ -835,7 +835,7 @@ video {
         text-align: center;
     }
 }
-@media (hover: none) {
+@media (hover: none) { /*display information by default for device that does not ssupport hover*/
     .event-card .image-details,
     .attraction-card .image-details {
         opacity: 1;
